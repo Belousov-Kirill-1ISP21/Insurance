@@ -1,0 +1,17 @@
+.authCheckboxContainer{
+    width: 44%;
+    display: inline-block;
+}
+
+.authCheckbox{
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.authCheckboxLabel{
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.5vh;
+    color: #616161;
+}

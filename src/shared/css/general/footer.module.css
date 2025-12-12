@@ -1,0 +1,48 @@
+.footer{
+    width: 100%;
+    height: 22vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1%;
+}
+
+.footerImgContainer{
+    width: 88%;
+    height: 44%;
+}
+
+.footerImg{
+    margin: 1%;
+    width: auto;
+    height: 8vh;
+}
+
+.footerButtonContainer{
+    width: 88%;
+    height: 24%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerButtonContainerLink{
+    text-decoration: none;
+}
+
+.footerButton{
+    width: auto;
+    height: 4vh;
+    background-color: white;
+    border: none;
+    font-size: 1.5vh;
+}
+
+.footerText{
+    color: gray;
+    font-size: 1vh;
+}

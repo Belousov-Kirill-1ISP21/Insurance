@@ -1,0 +1,51 @@
+.authHeader{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+}
+
+.authHeaderContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 4%;
+}
+
+.authHeaderLogoButtonLink{
+    text-decoration: none;
+    width: 12%;
+    height: 44%;
+    display: inline-block;
+    margin: 1%;
+}
+
+.authHeaderLogoButton{
+    width: 100%;
+    height: 100%;
+    background-color: #000033;
+    border-color: #000033;
+    text-align: center;
+    color: white;
+    border-radius: 6px;
+}
+
+.authHeaderRightLink{
+    text-decoration: none;
+    width: 12%;
+    height: 44%;
+    display: inline-block;
+    margin: 1%;
+}
+
+.authHeaderRightButton{
+    width: 100%;
+    height: 100%;
+    background-color: #000033;
+    border-color: #000033;
+    border-radius: 6px;
+    color: white;
+}

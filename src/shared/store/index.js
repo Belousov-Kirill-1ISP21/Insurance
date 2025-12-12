@@ -1,0 +1,5 @@
+export { store } from './store'
+export * from './hooks'
+export * from './slices/authSlice'
+export * from './slices/policiesSlice'
+export * from './slices/clientSlice'

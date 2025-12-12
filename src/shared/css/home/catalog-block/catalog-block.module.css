@@ -1,0 +1,41 @@
+.homeCatalogBlock{ 
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(232 232 232 / 10.8%), rgb(72 100 111 / 60%)), url("@shared/assets/side-background/SideBackground.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeCatalogBlockHead{ 
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeCatalogBlockHeadH1{ 
+    color: white;
+    font-size: 4vh;
+}
+
+.homeCatalogBlockHeadText{ 
+    color: white;
+    font-size: 2vh;
+}
+
+.homeCatalogBlockContainer{
+    height: 69%;
+    width: 69%;
+    text-align: center;
+    margin-left: 14%;
+    margin-right: 12%;
+}

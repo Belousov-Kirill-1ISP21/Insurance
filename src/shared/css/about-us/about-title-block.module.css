@@ -1,0 +1,13 @@
+.aboutTitleBlock{
+    height: 69vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutTitleBlockImg{
+    height: 100%;
+    width: 69%;
+    margin-right: 10%;
+}

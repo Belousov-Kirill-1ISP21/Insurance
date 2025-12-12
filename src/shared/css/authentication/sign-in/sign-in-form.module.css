@@ -1,0 +1,78 @@
+.signInForm{
+    background-color: white;
+    width: 100%;
+    height: 90vh;
+}
+
+.signInFormH1{
+    font-size: 4vh;
+}
+
+.signInFormForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    width: 100%;
+    height: 64vh;
+}
+
+.signInFormInput{
+    height: 8%;
+    width: 44%;
+    text-indent: 4%;
+    color: #9E9E9E;
+}
+
+.signInFormContainer{
+    height: 4%;
+    width: 44%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.signInFormFormCheckbox{
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.signInFormFormCheckboxContainer{
+    width: 44%;
+    display: inline-block;
+}
+
+.signInFormFormCheckboxLabel{
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.5vh;
+    color: #616161;
+}
+
+.signInFormForgotPasswordButton{
+    display: inline-block;
+    margin-left: 2%;
+    border: white;
+    background-color: white;
+    font-size: 1.5vh;
+    color: #616161;
+    padding-bottom: 2%;
+}
+
+.signInFormButton{
+    height: 8%;
+    width: 44%;
+    background-color: #000033;
+    border-color: #000033;
+    color: white;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    width: 44%;
+  }

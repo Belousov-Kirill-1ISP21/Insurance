@@ -1,0 +1,78 @@
+.tariffBlock{
+    background-color: #000033;
+    width: 88%;
+    height: 69vh;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+.tariffBlockH1Container{
+    text-align: center;
+}
+
+.tariffBlockH1{
+    color: white;
+}
+
+.tariffBlockInfoContainer{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+.tariffBlockInfoImgContainer{
+    height: 100%;
+    width: 44%;
+}
+
+.tariffBlockImg{
+    height: 100%;
+    width: 100%;
+}
+
+.tariffBlockInfoTextContainer{
+    height: 100%;
+    width: 44%;
+}
+
+.tariffBlockText{
+    color: white;
+    display: inline-block;
+    font-size: 2.5vh;
+}
+
+.tariffBlockPrice{
+    color: white;
+    display: inline-block;
+    font-size: 2.6vh;
+    font-weight: bold;
+}
+
+.tariffBlockButtonContainer{
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+
+.tariffBlockLink{
+    width: 100%;
+    height: 100%;
+}
+
+.tariffBlockButton{
+    width: 69%;
+    height: 69%;
+    color: white;
+    background-color: #4669B0;
+    border-radius: 14px;
+    font-size: 2vh;
+    border: none;
+}

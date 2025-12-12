@@ -1,0 +1,27 @@
+.sideBackground {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sideDarkBackgroundImg{
+    background-image: linear-gradient(to right, rgb(232 232 232 / 10.8%), rgb(72 100 111 / 60%)), url("@shared/assets/side-background/SideDarkBackground.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    height: 100%;
+    width: 100%;
+    transform: scale(1.01);
+    overflow: hidden;
+}
+
+.sideBackgroundImg{
+    background-image: linear-gradient(to right, rgb(232 232 232 / 10.8%), rgb(72 100 111 / 60%)), url("@shared/assets/side-background/SideBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    transform: scale(1.01);
+    overflow: hidden;
+}

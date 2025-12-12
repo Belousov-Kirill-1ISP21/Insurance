@@ -1,0 +1,29 @@
+.sidePanel{
+    height: 90%;
+    width: 69%;
+    margin-left: 10%;
+}
+
+.sidePanelHead{
+    height: 25%;
+    width: 100%;
+    text-align: left;
+    border-top: white;
+    border-bottom: #F3F4F6;
+    border-right: white;
+    border-left: white;
+    border-style: solid;
+}
+
+.sidePanelHeadH1{
+    font-size: 2vh;
+}
+
+.sidePanelHeadText{
+    font-size: 1.5vh;
+}
+
+.sidePanelContainer{
+    height: 70%;
+    width: 100%;
+}

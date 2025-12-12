@@ -1,0 +1,61 @@
+.catalogCard{
+    background-color: #000033;
+    margin: 2%;
+    float: left;
+    width: 20%;
+    height: 69%;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalogCardImgContainer{
+    height: 44%;
+    width: 77%;
+}
+
+.catalogCardImg{
+    height: 100%;
+    width: 100%;
+}
+
+.catalogCardInfoContainer{
+    height: 44%;
+    width: 69%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4%;
+}
+
+.catalogCardH1{
+    color: white;
+    font-size: 2vh;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.catalogCardText{
+    color: white;
+    font-size: 1.5vh;
+    margin-top: 0;
+    text-align: left;
+}
+
+.catalogCardLink{
+    width: 100%;
+    height: 27%;
+    text-align: center;
+}
+
+.catalogCardButton{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #4669B0;
+    border-color: #4669B0;
+    border-radius: 14px;
+    font-size: 2vh;
+}

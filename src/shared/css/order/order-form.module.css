@@ -1,0 +1,109 @@
+.orderForm{
+    background-color: white;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.orderFormH1Container{
+    width: 69%;
+    text-align: center;
+}
+
+.orderFormH1{
+    font-size: 2.5vh;
+    color: rgb(0, 0, 0, 88%);
+}
+
+.orderFormForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 44%;
+    height: 80vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    border:none;
+}
+
+.orderFormInputContainer{ /* ДОБАВЛЕНО */
+    width: 69%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5%;
+}
+
+.orderFormH2{ /* ДОБАВЛЕНО */
+    text-align: left;
+    width: 69%;
+    margin: 0;
+    font-size: 1.5vh;
+    margin-bottom: 1%;
+}
+
+.orderFormPassportInputContainer{
+    width: 69%;
+    height: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5%;
+    margin: 0.5%;
+}
+
+.orderFormPassportInput{
+    height: 24%;
+    width: 69%;
+    text-indent: 4%;
+    color: #9E9E9E;
+    border-radius: 14px;
+    border:none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.orderFormInput{
+    height: 54%;
+    width: 69%;
+    text-indent: 4%;
+    color: #9E9E9E;
+    border:none;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 1%;
+}
+
+.orderFormButtonContainer{ /* ДОБАВЛЕНО */
+    height: 10%;
+    width: 22%;
+    margin: 2%;
+}
+
+.orderFormFormLink{
+    height: 8%;
+    width: 44%;
+}
+
+.orderFormButton{
+    height: 100%;
+    width: 100%;
+    background-color: #4669B0;
+    border-color: #4669B0;
+    border-radius: 14px;
+    color: white;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    width: 69%;
+  }

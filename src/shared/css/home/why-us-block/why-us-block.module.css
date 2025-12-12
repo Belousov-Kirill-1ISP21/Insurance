@@ -1,0 +1,36 @@
+.whyUsBlock{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #F7F8FA;
+    padding-top: 4%;
+}
+
+.whyUsBlockHeader{
+    height: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.whyUsBlockTitle{
+    font-size: 9vh;
+    margin-top: 0%;
+}
+
+.whyUsBlockText{
+    display: inline-block;
+    font-size: 2vh;
+    color:gray;
+}
+
+.whyUsBlockHighlight{
+    display: inline-block;
+    font-size: 3vh;
+    margin: 1%;
+}
+
+.whyUsBlockContainer{
+    height: 70%;
+    width: 88%;
+    margin-left: 8%;
+}
