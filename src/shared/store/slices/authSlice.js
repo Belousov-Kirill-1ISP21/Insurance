@@ -1,15 +1,48 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+const getStoredUsers = () => {
+  const users = localStorage.getItem('registeredUsers');
+  return users ? JSON.parse(users) : [];
+};
+
+const saveUserToStorage = (userData) => {
+  const existingUsers = getStoredUsers();
+  const newUsers = [...existingUsers, userData];
+  localStorage.setItem('registeredUsers', JSON.stringify(newUsers));
+};
+
+const findUserByEmail = (email) => {
+  const users = getStoredUsers();
+  return users.find(user => user.email === email);
+};
+
 export const loginUser = createAsyncThunk(
   'auth/login',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await new Promise((resolve) => 
-        setTimeout(() => resolve({ 
-          user: { id: 1, email, name: 'User' }, 
-          token: 'fake-jwt-token' 
-        }), 1000)
-      );
+      const storedUser = findUserByEmail(email);
+      
+      if (!storedUser) {
+        return rejectWithValue('Пользователь не найден');
+      }
+      
+      if (storedUser.password !== password) {
+        return rejectWithValue('Неверный пароль');
+      }
+      
+      const { password: _, ...userWithoutPassword } = storedUser;
+      
+      const response = {
+        user: { 
+          id: storedUser.id, 
+          email: storedUser.email, 
+          name: `${storedUser.surname} ${storedUser.name}`,
+          phone: storedUser.phone,
+          username: storedUser.email.split('@')[0]
+        }, 
+        token: `fake-jwt-token-${Date.now()}`
+      };
+      
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -21,12 +54,33 @@ export const registerUser = createAsyncThunk(
   'auth/register',
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await new Promise((resolve) => 
-        setTimeout(() => resolve({ 
-          user: { id: Date.now(), ...userData }, 
-          token: 'fake-jwt-token' 
-        }), 1000)
-      );
+      const existingUser = findUserByEmail(userData.email);
+      
+      if (existingUser) {
+        return rejectWithValue('Пользователь с таким email уже зарегистрирован');
+      }
+      
+      const newUser = {
+        id: Date.now(),
+        ...userData,
+        createdAt: new Date().toISOString()
+      };
+      
+      saveUserToStorage(newUser);
+      
+      const { password: _, ...userWithoutPassword } = newUser;
+      
+      const response = {
+        user: { 
+          id: newUser.id, 
+          email: newUser.email, 
+          name: `${newUser.surname} ${newUser.name}`,
+          phone: newUser.phone,
+          username: newUser.email.split('@')[0]
+        }, 
+        token: `fake-jwt-token-${Date.now()}`
+      };
+      
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -39,7 +93,7 @@ const authSlice = createSlice({
   initialState: {
     user: null,
     token: localStorage.getItem('token'),
-    isAuthenticated: false,
+    isAuthenticated: !!localStorage.getItem('token'),
     loading: false,
     error: null,
   },

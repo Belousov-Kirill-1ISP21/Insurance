@@ -3,7 +3,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import styles from '@shared/css/authentication/sign-in/sign-in-form.module.css';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@features/auth/lib/useAuth';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '@shared/store/slices/authSlice';
 import { TextInput } from '@shared/ui/kit/input/TextInput';
 import { AuthCheckBox } from '@shared/ui/kit/checkbox/AuthCheckBox';
  
@@ -22,7 +23,7 @@ const signInSchema = yup.object().shape({
 
 export const SignInForm = () => {
     const navigate = useNavigate();
-    const { login } = useAuth();
+    const dispatch = useDispatch();
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(signInSchema) 
@@ -30,7 +31,7 @@ export const SignInForm = () => {
 
     const onSubmit = async (data) => {
         try {
-            login();
+            await dispatch(loginUser(data)).unwrap();
             navigate('/profile');
         } catch (error) {
             console.error('Ошибка входа:', error);

@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import styles from '@shared/css/authentication/sign-up/sign-up-form.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '@shared/store/slices/authSlice';
 import { TextInput } from '@shared/ui/kit/input/TextInput';
 
 const schema = yup.object().shape({
@@ -25,14 +27,19 @@ const schema = yup.object().shape({
 
 export const SignUpForm = (props) => {
     const navigate = useNavigate(); 
+    const dispatch = useDispatch();
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
 
     const onSubmit = async (data) => {
-        console.log(data);
-        navigate('/sign-in'); 
+        try {
+            await dispatch(registerUser(data)).unwrap();
+            navigate('/profile'); 
+        } catch (error) {
+            console.error('Ошибка регистрации:', error);
+        }
     };
 
     const TextInputProps = [
