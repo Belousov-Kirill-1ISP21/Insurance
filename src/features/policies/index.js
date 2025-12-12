@@ -1,0 +1,6 @@
+export { getInsurancePolicies, createInsurancePolicy, updateInsurancePolicy, deleteInsurancePolicy } from '@entities/policy/api/policyApi'
+export { AdminHeader } from './ui/AdminHeader'
+export { PolicyForm } from './ui/PolicyForm'
+export { PoliciesList } from './ui/PoliciesList'
+export { fetchPolicies, createPolicy, updatePolicy, deletePolicy } from '../store/slices/policiesSlice'
+export { useCreatePolicy, useUpdatePolicy, useDeletePolicy, usePolicies } from '../store/hooks'

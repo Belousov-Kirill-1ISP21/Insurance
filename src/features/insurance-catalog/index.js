@@ -1,0 +1,5 @@
+export { HomeCatalogBlock } from './ui/HomeCatalogBlock'
+export { HomeCatalogCard } from './ui/HomeCatalogCard'
+export { CatalogBlock as CatalogPageBlock } from './ui/CatalogBlock'
+export { CatalogCard as CatalogPageCard } from './ui/CatalogCard'
+export { TariffBlock } from './ui/TariffBlock'

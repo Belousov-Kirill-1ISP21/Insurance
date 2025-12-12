@@ -1,0 +1,6 @@
+export { getClients } from '@entities/client/api/clientApi'
+export { MainPanel } from './ui/MainPanel'
+export { MainPanelLine } from './ui/MainPanelLine'
+export { SidePanel } from './ui/SidePanel'
+export { SidePanelLine } from './ui/SidePanelLine'
+export { useProfile } from '../store/hooks'
